@@ -2,5 +2,5 @@
 
 ## 차 례
 
-#### 1. [Getting Started](./doc/chapter-01-getting-started.md)  
+#### 1. [Getting Started](./docs/chapter-01-getting-started.md)  
 
