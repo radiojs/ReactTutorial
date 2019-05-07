@@ -12,3 +12,12 @@
 ```
 
 위 명령어들을 실행하면, 자동으로 웹 브라우저가 구동되어, `http://localhost:3000` 주소를 접속하여 화면을 보여준다.
+
+## 명령어 모음
+
+* `yarn start` : 앱을 바로 실행한다.
+* `yarn build` : 앱을 빌드하여 `/build` 디렉토리에 산출물을 출력한다.
+* `yarn test`  : 앱에 대한 test 과정을 실행한다.
+* `yarn eject` : 앱 소스를 분해하여 webpack, eslint, babel 등의 숨겨저 있는 설정 상태를 보여준다.
+
+
