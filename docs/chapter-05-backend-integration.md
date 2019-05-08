@@ -66,20 +66,24 @@ API URI 는 `/api/blogs` 하나만 구현한다. 이 요청은 blog 목록 데�
 ```
     ...
     async componentDidMount() {
-        this.setState({ loading: true });
+        this.setState({ loading: true, error: null });
         try {
             const result = await fetch('/api/blogs');
             if (result) {
                 const json = await result.json();
                 if (json.blogs) {
-                    this.setState({ loading: false, blogs: json.blogs });
+                    this.setState({
+                        loading: false,
+                        data: {
+                            blogs: json.blogs,
+                        },
+                    });
                 }
             }
         } catch (ex) {
-            console.log('fetch error', ex);
+            this.setState({ loading: false, error: 'error_fetch' });
         }
     }
-
 ```
 
 componentDidMount 메서드에서 서버에 `fetch(...)` 함수를 이용하여 데이터를 요청한다. 

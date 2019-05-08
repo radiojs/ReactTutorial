@@ -8,38 +8,46 @@ class BlogList extends React.Component {
 
         this.state = { 
             loading: false,
-            blogs: [],
+            data: {},
+            error: null,
         };
     }
 
     async componentDidMount() {
-        this.setState({ loading: true });
+        this.setState({ loading: true, error: null });
         try {
             const result = await fetch('/api/blogs');
             if (result) {
                 const json = await result.json();
                 if (json.blogs) {
-                    this.setState({ loading: false, blogs: json.blogs });
+                    this.setState({
+                        loading: false,
+                        data: {
+                            blogs: json.blogs,
+                        },
+                    });
                 }
             }
         } catch (ex) {
-            console.log('fetch error', ex);
+            this.setState({ loading: false, error: 'error_fetch' });
         }
     }
 
     render() {
-        const { loading, blogs } = this.state;
+        const { loading, data, error } = this.state;
 
         return (
             <Page title="BlogList">
                 <h1>Blog list</h1>
                 {loading ? (
                     <p>Loading...</p>
+                ) : (error ? (
+                    <p>Error: check server connection</p>
                 ) : (
-                    blogs && blogs.map(doc => (
+                    data.blogs && data.blogs.map(doc => (
                         <p key={doc._id}>{doc.title}</p>
                     ))
-                )}
+                ))}
             </Page>
         )
     }
