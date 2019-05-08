@@ -1,6 +1,7 @@
 @import-normalize; /* bring in normalize.css styles */
 
 @import "css/variables";
+@import "components/layout/Layout";
 
 body {
   margin: 0;
@@ -18,4 +19,8 @@ code {
   color: $colorDarkGray;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  text-decoration: none;
 }

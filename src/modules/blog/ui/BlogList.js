@@ -1,9 +1,13 @@
 import React from 'react';
 
+import Page from '../../../components/layout/Page';
+
 class BlogList extends React.Component {
     render() {
         return (
-            <div>BlogList</div>
+            <Page title="BlogList">
+                BlogList Content
+            </Page>
         )
     }
 }
