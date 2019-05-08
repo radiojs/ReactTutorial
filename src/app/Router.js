@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import Home from '../modules/home/ui/Home';
 import About from '../modules/about/ui/About';
-import BlogList from '../modules/blog/ui/BlogList';
+import BlogListContainer from '../modules/blog/ui/BlogListContainer';
 
 const AppRouter = () => (
     <Router>
@@ -12,7 +12,7 @@ const AppRouter = () => (
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/about" exact component={About} />
-                <Route path="/blogs" exact component={BlogList} />
+                <Route path="/blogs" exact component={BlogListContainer} />
             </Switch>
         </Layout>
     </Router>
