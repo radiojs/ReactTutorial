@@ -1,4 +1,9 @@
 import express from 'express';
+import log4js from 'log4js';
+
+import './config/log4js';
+
+const logger = log4js.getLogger();
 
 const app = express();
 const PORT = 4000;
@@ -34,5 +39,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Express server listening on port ${PORT}`);
+  logger.info(`Express server listening on port ${PORT}`);
 });

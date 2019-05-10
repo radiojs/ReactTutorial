@@ -1,5 +1,19 @@
 # Error handling
 
+## Log4js
+
+서버에서 오류를 처리하기 위해서는 logging framework를 구축해야 한다.  
+다양한 프레임워크가 있는데, 그 중에서 우리는 `log4js`를 선택한다.
+
+다음 패키지를 추가하여 설치한다.
+
+```
+    $ yarn add log4js
+```
+
+`server/config/log4js` 파일에 설정을 저장하고 사용한다.
+
+
 ## File NOT found
 
 라우팅 주소가 잘못되어 존재하지 않는 페이지를 요청하는 경우를 처리한다.
