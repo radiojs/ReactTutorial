@@ -5,7 +5,7 @@ import BlogList from './BlogList';
 class BlogListContainer extends React.Component {
     constructor(props) {
         super(props);
-
+        
         this.state = { 
             loading: false,
             data: {},

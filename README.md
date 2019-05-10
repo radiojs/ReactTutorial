@@ -8,3 +8,4 @@
 #### 4. [Layout](./docs/chapter-04-layout.md)  
 #### 5. [Backend Integration](./docs/chapter-05-backend-integration.md)  
 #### 6. [Container Pattern](./docs/chapter-06-container-pattern.md)  
+#### 7. [Error Handling](./docs/chapter-07-error-handling.md)
